@@ -28,13 +28,15 @@ namespace WebServiceCompra
             {
                 Response respuesta = new Response();
                 respuesta.respuestas = "El usuario ha sído encontrado de manera sadisfactoria";
+                respuesta.CodigoCliente = 1;
+                respuesta.CodigoEmpleado = 1;
                 HttpContext.Current.Response.ContentType = "application/json; charset=utf-8 ";
                 HttpContext.Current.Response.Write(JsonConvert.SerializeObject(respuesta));
             }
             else
             {
                 Response respuesta = new Response();
-                respuesta.respuestas = "ApiKeyErronea";
+                respuesta.respuestas = "No se puede procesar la solicitud";
                 HttpContext.Current.Response.ContentType = "application/json; charset=utf-8 ";
                 HttpContext.Current.Response.Write(JsonConvert.SerializeObject(respuesta));
             }

@@ -8,5 +8,7 @@ namespace WebServiceCompra.Model
     public class Response
     {
         public string respuestas { get; set; }
+        public int CodigoCliente { get; set; }
+        public int CodigoEmpleado { get; set; }
     }
 }
